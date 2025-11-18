@@ -1,0 +1,13 @@
+<h1>TasteMap — Koleksi Kuliner Anda</h1>
+
+<a href="/add">Tambah Kuliner</a>
+
+<div style="display:flex; gap:20px; flex-wrap:wrap;">
+    <% foods.forEach(food => { %>
+        <div style="border:1px solid #ccc; padding:10px;">
+            <img src="/uploads/<%= food.photo %>" width="150">
+            <p><%= food.name %></p>
+            <a href="/detail/<%= food._id %>">Detail</a>
+        </div>
+    <% }) %>
+</div>
